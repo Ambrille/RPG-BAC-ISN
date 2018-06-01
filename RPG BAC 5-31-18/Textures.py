@@ -242,6 +242,62 @@ class BackgroundClass(object):
     Noir = Textures("Textures/Detail/Noir.png", TailleGrid, TailleGrid)
     BLOCPROFONDEUR = Textures("Textures/Detail/Bloc.png", TailleGrid, TailleGrid)
 
+    #----------Ville----------#
+    Batiment1 = Textures("Textures/Ville/Batiment1.png", 96*2, 96*2)
+    Batiment2 = Textures("Textures/Ville/Batiment2.png", 64*2, 104*2)
+    Batiment3 = Textures("Textures/Ville/Batiment3.png", 64*2, 84*2)
+    Hotel = Textures("Textures/Ville/Hotel.png", 200, 260)
+    Lampadaire = Textures("Textures/Ville/Lampadaire.png", TailleGrid, TailleGrid*3)
+    Poubelle  = Textures("Textures/Ville/Poubelle.png", 16*2, 24*2)
+    Trotoire = Textures("Textures/Ville/Trotoire.png", TailleGrid, TailleGrid)
+    Caissel = Textures("Textures/Ville/Caissel.png", TailleGrid*2, TailleGrid*2)
+    Caissem = Textures("Textures/Ville/Caissem.png", TailleGrid, TailleGrid)
+    Caissep = Textures("Textures/Ville/Caissep.png", TailleGrid, TailleGrid)
+    ConteneurB = Textures("Textures/Ville/ConteneurB.png", TailleGrid*2, TailleGrid*2)
+    ConteneurR = Textures("Textures/Ville/ConteneurR.png", TailleGrid*2, TailleGrid*2)
+    Grue = Textures("Textures/Ville/Grue.png", TailleGrid*3, TailleGrid*4)
+    Port1 = Textures("Textures/Ville/Port1.png", TailleGrid*11, TailleGrid*7)
+    Port2 = Textures("Textures/Ville/Port2.png", TailleGrid*8, TailleGrid*6)
+    Portrive1 = Textures("Textures/Ville/Portrive1.png", TailleGrid, TailleGrid)
+    Portrive2 = Textures("Textures/Ville/Portrive2.png", TailleGrid, TailleGrid)
+    Portrive3 = Textures("Textures/Ville/Portrive3.png", TailleGrid, TailleGrid)
+    Portrive4 = Textures("Textures/Ville/Portrive4.png", TailleGrid, TailleGrid)
+    Portrive5 = Textures("Textures/Ville/Portrive5.png", TailleGrid, TailleGrid)
+    Portrive6 = Textures("Textures/Ville/Portrive6.png", TailleGrid, TailleGrid)
+    Portrive7 = Textures("Textures/Ville/Portrive7.png", TailleGrid, TailleGrid)
+    Portrive8 = Textures("Textures/Ville/Portrive8.png", TailleGrid, TailleGrid)
+    Tas = Textures("Textures/Ville/Tas.png", 80*2, 64*2)
+    Mairie = Textures("Textures/Ville/Mairie.png", 144*2, 160*2)
+
+    #Grotte#
+    GrotteSol = Textures("Textures/Grotte/GrotteSol.png", TailleGrid, TailleGrid)
+    GrotteH = Textures("Textures/Grotte/GrotteH.png", TailleGrid, TailleGrid)
+    GrotteB = Textures("Textures/Grotte/GrotteB.png", TailleGrid, TailleGrid)
+    GrotteD = Textures("Textures/Grotte/GrotteD.png", TailleGrid, TailleGrid)
+    GrotteG = Textures("Textures/Grotte/GrotteG.png", TailleGrid, TailleGrid)
+    GrotteCHD = Textures("Textures/Grotte/GrotteHD.png", TailleGrid, TailleGrid)
+    GrotteCBG = Textures("Textures/Grotte/GrotteCGB.png", TailleGrid, TailleGrid)
+    GrotteCBD = Textures("Textures/Grotte/GrotteCDB.png", TailleGrid, TailleGrid)
+    GrotteCHG = Textures("Textures/Grotte/GrotteHG.png", TailleGrid, TailleGrid)
+    GrotteHG = Textures("Textures/Grotte/GrotteCG.png", TailleGrid, TailleGrid)
+    GrotteBD = Textures("Textures/Grotte/GrotteBD.png", TailleGrid, TailleGrid)
+    GrotteHD = Textures("Textures/Grotte/GrotteCD.png", TailleGrid, TailleGrid)
+    GrotteBG = Textures("Textures/Grotte/GrotteBG.png", TailleGrid, TailleGrid)
+    GrotteEscalier = Textures("Textures/Grotte/GrotteEscalier.png", TailleGrid, TailleGrid)
+    Echelle = Textures("Textures/Grotte/Echelle.png", TailleGrid*2, TailleGrid*2)
+    GrotteEntrée = Textures("Textures/Grotte/Entrée.png", TailleGrid*3, TailleGrid*2)
+    BlackH = Textures("Textures/Grotte/BlackH.png", TailleGrid, TailleGrid)
+    BlackB = Textures("Textures/Grotte/BlackB.png", TailleGrid, TailleGrid)
+    BlackD = Textures("Textures/Grotte/BlackD.png", TailleGrid, TailleGrid)
+    BlackG = Textures("Textures/Grotte/BlackG.png", TailleGrid, TailleGrid)
+    BlackCHD = Textures("Textures/Grotte/BlackCHD.png", TailleGrid, TailleGrid)
+    BlackCBG = Textures("Textures/Grotte/BlackCBG.png", TailleGrid, TailleGrid)
+    BlackCBD = Textures("Textures/Grotte/BlackCBD.png", TailleGrid, TailleGrid)
+    BlackCHG = Textures("Textures/Grotte/BlackCHG.png", TailleGrid, TailleGrid)
+    BlackHG = Textures("Textures/Grotte/BlackHG.png", TailleGrid, TailleGrid)
+    BlackBD = Textures("Textures/Grotte/BlackBD.png", TailleGrid, TailleGrid)
+    BlackHD = Textures("Textures/Grotte/BlackHD.png", TailleGrid, TailleGrid)
+    BlackBG = Textures("Textures/Grotte/BlackBG.png", TailleGrid, TailleGrid)
     #----------PERSO----------#
     #-----JOUEUR-----#
     
@@ -292,14 +348,22 @@ class BackgroundClass(object):
                     #----------Eglise----------#
                     "AUT" : Autel, "BAC" : Banc, "FLB" : Flambeau, "MUE" : Mureglise, "VI1" : Vitrail1, "VI2" : Vitrail2,
                     #---Batiment---#
-                    "MaisonDepart" : MaisonDepart, "Eglise" : Eglise, "QGVerichon" : QGVerichon, "LaboDepart" : LaboDepart
+                    "MaisonDepart" : MaisonDepart, "Eglise" : Eglise, "QGV" : QGVerichon, "LaboDepart" : LaboDepart,
+                    #----------Ville----------#
+                    "BT1":Batiment1, "BT2":Batiment2, "BT3":Batiment3, "Hotel" : Hotel, "Lamp" : Lampadaire, "Poubelle" : Poubelle, "TRT" : Trotoire, "CAIL" : Caissel, "CAIM" : Caissem, "CAIP" : Caissep,
+                    "CONB":ConteneurB, "CONR":ConteneurR, "GRU" : Grue, "PRT1" : Port1, "PRT2":Port2, "PRTR1":Portrive1, "PRTR2":Portrive2, "PRTR3":Portrive3, "PRTR4":Portrive4, "PRTR5":Portrive5, "PRTR6":Portrive6, "PRTR7":Portrive7, "PRTR8":Portrive8,
+                    "TS":Tas , "MAR" : Mairie,
+                    #---Grotte---#
+                    "5" : GrotteSol, "5H" : GrotteH, "5B" : GrotteB, "5D" : GrotteD, "5G" : GrotteG, "5HG" : GrotteHG, "5BG" : GrotteBG, "5HD" : GrotteHD, "5BD" : GrotteBD,
+                    "5CHD" : GrotteCHD, "5CBG" : GrotteCBG, "5CBD" : GrotteCBD, "5CHG" : GrotteCHG, "5cH" : BlackH, "5cB" : BlackB, "5cD" : BlackD, "5cG" : BlackG,
+                    "5cHG" : BlackHG, "5cBG" : BlackBG, "5cHD" : BlackHD, "5cBD" : BlackBD, "5cCHD" : BlackCHD, "5cCBD" : BlackCBD, "5cCHG" : BlackCHG, "5cCBG" : BlackCBG, "Grotteentry" : GrotteEntrée, "Echelle" : Echelle, "Esca" : GrotteEscalier
                     }
     
     DicoDecorsOBSTACLE = {"Bloc2" : BLOCPROFONDEUR}
     
     DicoDecors = {"NOIR" : Noir, "HCouette" : Couette, "HPlante" : Plante, "HBiblioV" : BibliothequeVerte, "HBiblioM" : BibliothequeMarron, "Temizuya" : TemizuyaWithout, "Shrine" : ShrineWithout,
-                  "Sapin1" : Sapin1Sha, "Sapin2" : Sapin2Sha, "Arbuste1" : Arbuste1Sha, "Arbre1" : ArbreSha, "Champignon1" : Champignon, "Rocher1" : Rocher1Sha, "SER" : Serveur,
-                  "RO" : Roche, "PAL" : Palmier, "PAR" : Para, "HVitrine" : Vitrine, "AUT" : Autel
+                  "Sapin1" : Sapin1Sha, "Sapin2" : Sapin2Sha, "Arbuste1" : Arbuste1Sha, "Champignon1" : Champignon, "Rocher1" : Rocher1Sha, "SER" : Serveur,
+                  "RO" : Roche, "PAL" : Palmier, "PAR" : Para, "HVitrine" : Vitrine, "AUT" : Autel, "Eglise" : Eglise, "MaisonDepart" : MaisonDepart, "LaboDepart" : LaboDepart
                   }
 
     

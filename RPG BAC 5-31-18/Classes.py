@@ -59,9 +59,43 @@ class QuestClass(SDict):
         #Maison Perso#
         self.Maman = 0
         self.Bento = 0
-        #Premier Village#
-        #Labo#
+        #Personnages#
+        self.CharlesA = 0
+        self.Ambre = 0
+        self.Timothée = 0
+        self.Soana = 0
+        self.Hippolyte = 0
+        self.Jean = 0
+        self.CharlesV = 0
+        self.Sacha = 0
+        self.Joséphine = 0
+        self.Arno = 0
+        self.Paul = 0
+        self.Amelie = 0
+        self.Victor = 0
+        self.Tanguy = 0
+        self.Adrien = 0
+        self.Nicolas = 0
+        self.Julie = 0
+        self.Ewan = 0
+        self.Ryan = 0
+        self.LeoG = 0
+        self.Marin = 0
+        self.VictorA = 0
+        self.Alexis = 0
+        self.Emma = 0
+        self.Victoria = 0
+        self.VictorD = 0
+        self.Ines = 0
+        self.Julien = 0
+        self.Clara = 0
+        self.Thomas = 0
+        self.Martin = 0
+        self.Marie = 0
+        self.Barthelemy = 0
         self.Fabien = False
+        
+        
 
 class MapClass(SDict):
 

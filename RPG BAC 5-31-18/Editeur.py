@@ -43,20 +43,27 @@ CopyData = []
 CopyData2 = []
 
 for cle in Background.DicoTextures:
-    CopySprite = [Background.TailleGrid*(X+1), Background.TailleGrid*(16+Y), cle] #16+Y
-    X += 2
-    Count += 1
+    if Count <= 175:
+        CopySprite = [Background.TailleGrid*(X+1), Background.TailleGrid*(16+Y), cle] #16+Y
+    elif Count > 150:
+        CopySprite2 = [Background.TailleGrid*(X+1), Background.TailleGrid*(16+Y), cle]
     if Count <= 175:
         CopyData.append(CopySprite)
     elif Count > 175:
-        CopyData.append(CopySprite2)
+        CopyData2.append(CopySprite2)
+    X += 2
+    Count += 1
     #print(len(CopyData))
     #print(Y)
     if X == 50:
+        if Y == 12:
+            Y = -2
         X = 0
         Y += 2
+    
 Inv = "Close"
 InvPage = 1
+CopyDataActive = CopyData
 #---#
 
 #---CHARGER UNE MAP---#
@@ -91,7 +98,7 @@ def RechargerMap(Fichier):
 CoordSouris = 0
 Souris_x, Souris_y = 0, 0
 
-Largeur_Map, Hauteur_Map = 4*Background.TailleGrid, 1*Background.TailleGrid
+Largeur_Map, Hauteur_Map = 1*Background.TailleGrid, 1*Background.TailleGrid
 Selection = pygame.Surface((Background.TailleGrid, Background.TailleGrid), HWSURFACE|SRCALPHA)
 Selection.fill((200,0,0))
 
@@ -103,8 +110,8 @@ Brush = "1"
 
 #--- MAP ---#
 
-for x in range(0, Largeur_Map*30, Background.TailleGrid):
-    for y in range(0, Hauteur_Map*40, Background.TailleGrid):
+for x in range(0, Largeur_Map*1, Background.TailleGrid):
+    for y in range(0, Hauteur_Map*1, Background.TailleGrid):
         SpriteData.append([x, y, "3"])
 
 
@@ -149,7 +156,7 @@ while Continuer:
 
                 Copy = [Souris_x, Souris_y, Brush]
                 Presence = False
-                for Co in CopyData:
+                for Co in CopyDataActive:
                     if Co[0] == Copy[0] and Co[1] == Copy[1]:
                         Brush = Co[2]       
                         Presence = True
@@ -165,8 +172,10 @@ while Continuer:
                     Inv = "Close"
                     #print(Inv)
             elif event.key == pygame.K_KP2:
+                CopyDataActive = CopyData2
                 InvPage = 2
             elif event.key == pygame.K_KP1:
+                CopyDataActive = CopyData
                 InvPage = 1
                 
         elif event.type == pygame.KEYUP:
