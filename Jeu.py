@@ -42,28 +42,28 @@ ChargerFenetreJeu()
 
 AllPortailsFIXE = {
     # NOUVEAU: On peut mettre un tuple (x,y,z...) dans les coordonnées d'origines, qui signifie soit l'un soit l'autre
-                #Chambre//Salon
-                'StairsChambreToSalon' : ['ChambreTest', 'SalonTest', [9, 6], [0, 3], None],
-                'StairsSalonToChambre' : ['SalonTest', 'ChambreTest', [8, 3], [0, 0], None],
-                #Salon//Ville de Depart
-                'SalonToDepart' : ['SalonTest', 'Foret13', [(5,6), 12], [-16, -5], "Porte"],
-                'DepartToSalon' : ['Foret13', 'SalonTest', [(21,22), 18], [0, 3], "Porte"],
-                #Labo//Ville de Depart
-                'DepartToLabo' : ['Foret13', 'Labo7', [(38,39), 19], [15, 0], "Porte"],
-                'LaboToDepart' : ['Labo7', 'Foret13', [(7,8), 16], [-16, -5], "Porte"],
-                #RandomHouse//Ville de Depart
-                'RandSalonToDepart' : ['randomsalon', 'Foret13', [(5,6), 11], [-16, -5], "Porte"],
-                'DepartToRandSalon' : ['Foret13', 'randomsalon', [(27,28), 24], [6, 10], "Porte"],
-                #DepartToEglise1#
-                'Eglise1ToDepart1' : ['Eglise1', 'Foret13', [(15,16), 18], [-16, -4], "Porte"],
-                'DepartToEglise1' : ['Foret13', 'Eglise1', [(21,22), 33], [-10, 12], "Porte"],
-                #Eglise2ToEglise1#
-                'Eglise1ToEglise21' : ['Eglise1', 'Eglise2', [(20,21), 9], [-3, 12], None],
-                'Eglise2ToEglise11' : ['Eglise2', 'Eglise1', [(10,11), 9], [-10, 12], None],
-                #VilleToEglise1#
-                'Eglise2ToVille1' : ['Eglise2', 'Ville5', [(15,16), 18], [-16, -3], None],
-                'VilleToEglise21' : ['Ville5', 'Eglise2', [(45,46), 38], [14, 18], None],
-                   }
+    #Chambre//Salon
+    'StairsChambreToSalon' : ['ChambreTest', 'SalonTest', [9, 6], [0, 3], None],
+    'StairsSalonToChambre' : ['SalonTest', 'ChambreTest', [8, 3], [0, 0], None],
+    #Salon//Ville de Depart
+    'SalonToDepart' : ['SalonTest', 'Foret13', [(5,6), 12], [-16, -5], "Porte"],
+    'DepartToSalon' : ['Foret13', 'SalonTest', [(21,22), 18], [0, 3], "Porte"],
+    #Labo//Ville de Depart
+    'DepartToLabo' : ['Foret13', 'Labo7', [(38,39), 19], [15, 0], "Porte"],
+    'LaboToDepart' : ['Labo7', 'Foret13', [(7,8), 16], [-16, -5], "Porte"],
+    #RandomHouse//Ville de Depart
+    'RandSalonToDepart' : ['randomsalon', 'Foret13', [(5,6), 11], [-16, -5], "Porte"],
+    'DepartToRandSalon' : ['Foret13', 'randomsalon', [(27,28), 24], [6, 10], "Porte"],
+    #DepartToEglise1#
+    'Eglise1ToDepart1' : ['Eglise1', 'Foret13', [(15,16), 18], [-16, -4], "Porte"],
+    'DepartToEglise1' : ['Foret13', 'Eglise1', [(21,22), 33], [-10, 12], "Porte"],
+    #Eglise2ToEglise1#
+    'Eglise1ToEglise21' : ['Eglise1', 'Eglise2', [(20,21), 9], [-3, 12], "Echelle"],
+    'Eglise2ToEglise11' : ['Eglise2', 'Eglise1', [(10,11), 9], [-10, 12], "Echelle"],
+    #VilleToEglise1#
+    'Eglise2ToVille1' : ['Eglise2', 'Ville5', [(15,16), 18], [-16, -3], None],
+    'VilleToEglise21' : ['Ville5', 'Eglise2', [(45,46), 38], [14, 18], None],
+}
 
 AllPortails = {}
 for nom, data in AllPortailsFIXE.items():
@@ -127,6 +127,7 @@ def play():
     #---SONS---#
     # son.play(0, 0) #
     bruit_de_porte = charger_son("porte")
+    bruit_de_echelle = charger_son("echelle")
     #---#
 
     Pos_P = 0
@@ -331,9 +332,11 @@ def play():
             portail_origin, portail_dest, portail_coordonnes, portail_destination, portail_type = Portail
             if (LocPerso3[0] in portail_coordonnes[0] and LocPerso3[1] in portail_coordonnes[1]) \
                                                                and Maps.CurrentMapName == portail_origin:
-                if Portail[4] == "Porte":
+                if portail_type == "Porte":
                     # le portail est une porte
                     jouer_son(bruit_de_porte, 0.2)
+                elif portail_type == "Echelle":
+                    jouer_son(bruit_de_echelle, 0.1)
                 print(nomPortail)
                 Maps.CurrentMapName = str(portail_dest)
                 #CurrentMap = portail_dest
