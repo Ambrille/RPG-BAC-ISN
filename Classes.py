@@ -142,18 +142,17 @@ except (OSError, IOError) as e:
 
 def supprimer_tout():
     try:
-        os.remove("sauvegarde.json")
+        os.remove(Fichier_sauvegarde)
     except:
         pass
     try:
-        os.remove("sauvegarde_module.json")
+        os.remove(Fichier_sauvegarde_module)
     except:
         pass
     try:
-        os.remove("sauvegarde_map.json")
+        os.remove(Fichier_sauvegarde_Map)
     except:
         pass
-    Quest = QuestClass()
     Quest.default()
-    Modules = ModulesClass()
     Modules.default()
+    Maps.default()
