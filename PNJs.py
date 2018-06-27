@@ -167,8 +167,6 @@ class PNJ(NPC):
 
     def __init__(self, Nom, Pos, Dialogue = None, Surface = None, Direction = None):
         super(PNJ, self).__init__(Nom, Pos, Dialogue, Surface, Direction)
-        #super().__init__()
-    #def ApparitionPNJ(surface):
         
 class Timer:
     
@@ -307,7 +305,7 @@ DAdrien1 = [("Je suis perdu...", "Vous pourriez pas m'aider par hasard ?"), ("Je
 DAdrien2 = [("Dites, vous auriez pas l'heure par hasard ?...", "Et le jour en passant, ça m'aiderait bien..."), ("Bon, et puis l'année aussi, c'est que j'ai","pas trop la notion du temps moi...", "")]
 DAdrien3 = [("Vous ne savez pas où  est passé Victor D. par hasard ?","Je suis sûr qu’il m’a encore donné la mauvaise direction...")]
 
-Adrien1 = PNJ(Nom = "Adrien", Pos = (32*27, 32*29), Dialogue = Dialogue(Texte = DAdrien2), Surface = "Foret13", Direction = "Face0")
+Adrien1 = PNJ(Nom = "Adrien", Pos = (32*27, 32*29), Dialogue = Dialogue(Texte = DAdrien2), Surface = "Foret", Direction = "Face0")
 Adrien2 = PNJ(Nom = "Adrien", Pos = (32*25, 32*29), Dialogue = Dialogue(Texte = DAdrien1), Surface = "Guilde", Direction = "Face0")
 Adrien3 = PNJ(Nom = "Adrien", Pos = (32*25, 32*29), Dialogue = Dialogue(Texte = DAdrien3), Surface = "QGVerichon", Direction = "Face0")
 #Soana#
@@ -340,7 +338,7 @@ DLeoG2 = [("Halte la !","Rendez-vous ou mourrez !")]
 DInes1 = [("Bonjour Mon Chaton, bien dormi ?", "Le professeur Richard voulait te voir !"), ("Pourrais-tu le rejoindre dans son Labo ?", "C'est juste à côté, et je crois qu'il voulait te montrer des choses ~")]
 DInes2 = [("Salut Mon Amour ~", "As-tu  vu le professeur ?"),  ("*Votre mère retourne dans ses pensées*", "")]
 
-Ines = PNJ(Nom = "Ines", Pos = (32*7, 32*9), Dialogue = Dialogue(Texte = DInes1), Surface = "SalonTest", Direction = "Face0")
+Ines = PNJ(Nom = "Ines", Pos = (32*7, 32*9), Dialogue = Dialogue(Texte = DInes1), Surface = "Salon", Direction = "Face0")
 #Ambre#
 DAmbre = [("Bonjour ! Je vois que tu te portes plutot bien ~", "J'adore la nature..."), ("Je pourrais passer des heures à contempler le paysage...", "Pas toi ?")]
 DAmbre2 = [("C'est pour moi ça ?", "Tu remercieras ta mère de ma part ! Ca à l'air super bon ! ~"), ("Reviens me voir plus tard si ça te tente !", "")]
@@ -361,8 +359,8 @@ DFabien1 = [("Oh, Bonjour Jacques !", "Tu es venu ici pour choisir ton Premier P
                       ("Il a laissé un journal que j’ai soigneusement récupéré", "... j’attendais le bon moment pour te le donner."),("Il y mentionne notamment une grotte,", "Je pense que tu devrais commencer tes recherches par là.")]
 DFabien2 = [("Alors Jacques… Cette Grotte ?", "")]
 
-Fabien = PNJ(Nom = "Fabien", Pos = (32*5, 32*8), Dialogue = Dialogue(Texte = DFabien1), Surface = "Labo7", Direction = "Dos0")
+Fabien = PNJ(Nom = "Fabien", Pos = (32*5, 32*8), Dialogue = Dialogue(Texte = DFabien1), Surface = "Labo", Direction = "Dos0")
 #Martin#
 DMartin1 = [("Je retrouve pas ma PS4 !...", "Je suis sûr que c'est encore Pr. Richard..."), ("il deteste me voir jouer...", "")]
 DMartin2 = [("Bouh", "")]
-Martin = PNJ(Nom = "Martin", Pos = (32*8, 32*2), Dialogue = Dialogue(Texte = DMartin1), Surface = "Labo7", Direction = "Dos0")
+Martin = PNJ(Nom = "Martin", Pos = (32*8, 32*2), Dialogue = Dialogue(Texte = DMartin1), Surface = "Labo", Direction = "Dos0")

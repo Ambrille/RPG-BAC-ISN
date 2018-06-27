@@ -36,33 +36,33 @@ def ChargerFenetreJeu():
 
 ChargerFenetreJeu()
 #---#
-#Chambre = Mapping.Charger_Map("maps/ChambreTest.map")
-#Salon = Mapping.Charger_Map("maps/SalonTest.map")
+#Chambre = Mapping.Charger_Map("maps/Chambre1.map")
+#Salon = Mapping.Charger_Map("maps/Salon.map")
 #---#
 
 AllPortailsFIXE = {
     # NOUVEAU: On peut mettre un tuple (x,y,z...) dans les coordonnées d'origines, qui signifie soit l'un soit l'autre
     #Chambre//Salon
-    'StairsChambreToSalon' : ['ChambreTest', 'SalonTest', [9, 6], [0, 3], None],
-    'StairsSalonToChambre' : ['SalonTest', 'ChambreTest', [8, 3], [0, 0], None],
+    'StairsChambreToSalon' : ['Chambre1', 'Salon', [9, 6], [0, 3], None],
+    'StairsSalonToChambre' : ['Salon', 'Chambre1', [8, 3], [0, 0], None],
     #Salon//Ville de Depart
-    'SalonToDepart' : ['SalonTest', 'Foret13', [(5,6), 12], [-16, -5], "Porte"],
-    'DepartToSalon' : ['Foret13', 'SalonTest', [(21,22), 18], [0, 3], "Porte"],
+    'SalonToDepart' : ['Salon', 'Foret', [(5,6), 12], [-16, -5], "Porte"],
+    'DepartToSalon' : ['Foret', 'Salon', [(21,22), 18], [0, 3], "Porte"],
     #Labo//Ville de Depart
-    'DepartToLabo' : ['Foret13', 'Labo7', [(38,39), 19], [15, 0], "Porte"],
-    'LaboToDepart' : ['Labo7', 'Foret13', [(7,8), 16], [-16, -5], "Porte"],
+    'DepartToLabo' : ['Foret', 'Labo', [(38,39), 19], [15, 0], "Porte"],
+    'LaboToDepart' : ['Labo', 'Foret', [(7,8), 16], [-16, -5], "Porte"],
     #RandomHouse//Ville de Depart
-    'RandSalonToDepart' : ['randomsalon', 'Foret13', [(5,6), 11], [-16, -5], "Porte"],
-    'DepartToRandSalon' : ['Foret13', 'randomsalon', [(27,28), 24], [6, 10], "Porte"],
+    'RandSalonToDepart' : ['randomsalon', 'Foret', [(5,6), 11], [-16, -5], "Porte"],
+    'DepartToRandSalon' : ['Foret', 'randomsalon', [(27,28), 24], [6, 10], "Porte"],
     #DepartToEglise1#
-    'Eglise1ToDepart1' : ['Eglise1', 'Foret13', [(15,16), 18], [-16, -4], "Porte"],
-    'DepartToEglise1' : ['Foret13', 'Eglise1', [(21,22), 33], [-10, 12], "Porte"],
+    'Eglise1ToDepart1' : ['Eglise1', 'Foret', [(15,16), 18], [-16, -4], "Porte"],
+    'DepartToEglise1' : ['Foret', 'Eglise1', [(21,22), 33], [-10, 12], "Porte"],
     #Eglise2ToEglise1#
     'Eglise1ToEglise21' : ['Eglise1', 'Eglise2', [(20,21), 9], [-3, 12], "Echelle"],
     'Eglise2ToEglise11' : ['Eglise2', 'Eglise1', [(10,11), 9], [-10, 12], "Echelle"],
     #VilleToEglise1#
-    'Eglise2ToVille1' : ['Eglise2', 'Ville5', [(15,16), 18], [-16, -3], None],
-    'VilleToEglise21' : ['Ville5', 'Eglise2', [(45,46), 38], [14, 18], None],
+    'Eglise2ToVille1' : ['Eglise2', 'Ville', [(15,16), 18], [-16, -3], None],
+    'VilleToEglise21' : ['Ville', 'Eglise2', [(45,46), 38], [14, 18], None],
 }
 
 AllPortails = {}

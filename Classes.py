@@ -104,7 +104,8 @@ class MapClass(SDict):
         super(MapClass, self).__init__(*args)
 
     def default(self):
-        self.CurrentMapName = "ChambreTest"
+        self.CurrentMapName = "Chambre1"
+
 ### CHARGER ###
 
 if not os.path.exists("Save/"):
