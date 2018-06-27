@@ -1,0 +1,3 @@
+Presentation generale :
+
+Le fichier de notre jeu se trouve sous la forme suivante
