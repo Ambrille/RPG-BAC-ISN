@@ -17,17 +17,13 @@ Btn_Exit = pygame.image.load("Textures/Menu/Btn_exit.png")
 Btn_Exit2 = pygame.image.load("Textures/Menu/Btn_exit2.png")
 Sound = False
 
-def procedure():
-    	
-    pygame.mixer.init(44100, 0, 2, 2048)
+def menu():
     pygame.init()
     Menu = pygame.display.set_mode((Largeur, Hauteur))
     Menu.blit(fond, (0,0))
     Menu.blit(Btn_Continue, (200,200))
     Menu.blit(Btn_Reset, (200,300))
     Menu.blit(Btn_Exit, (200,400))
-    pygame.mixer.music.load("Musique/Test_DrumBass.mp3")
-    pygame.mixer.music.play()
     volume = pygame.mixer.music.get_volume()
     pygame.mixer.music.set_volume(0.1)
     channel1 = pygame.mixer.Channel(0)
@@ -35,17 +31,17 @@ def procedure():
 
 #400*65
     
-
     while True:
-        for event in pygame.event.get():
-            
+        for event in pygame.event.get():            
             if event.type==QUIT:
                 pygame.quit()
-                sys.exit()
+                sys.exit(0)
+                return
+
         pygame.display.update()
 
         for event in pygame.event.get():
-            son = pygame.mixer.Sound("Musique/tic.wav")
+            son = pygame.mixer.Sound("Musique/Sound/tic.wav")
             if event.type == pygame.MOUSEMOTION:
                 CoordSouris = pygame.mouse.get_pos()
                 Souris_x = event.pos[0]
@@ -99,20 +95,11 @@ def procedure():
                 if 200<Souris_x <600 and 200<Souris_y<265:
                     #son.play(0,1000,10)
                     pygame.mixer.music.stop()
-                    print("Continuer")
-                    import Jeu
+                    return "Continue"
                     
                 elif 200<Souris_x <600 and 300<Souris_y<365:
                     #son.play(0,1000,100)
-                    print("Nouvelle Partie")
-                    # Supprimer les fichiers de sauvegarde
-                    from Classes import supprimer_tout
-                    supprimer_tout()
+                    return "Reset"
 
                 elif 200<Souris_x <600 and 400<Souris_y<465:
-                    print("Quittez")
-                    pygame.quit()
-                    sys.exit()
-
-            
-procedure()
+                    return "Quitter"
