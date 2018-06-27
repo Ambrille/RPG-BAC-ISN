@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pygame
+import os
 from Save import *
 
 class SDict(dict):
@@ -105,6 +106,9 @@ class MapClass(SDict):
     def default(self):
         self.CurrentMapName = "ChambreTest"
 ### CHARGER ###
+
+if not os.path.exists("Save/"):
+    os.mkdir("Save/")
 
 #---QUEST---#
 Fichier_sauvegarde = "Save/sauvegarde.json"

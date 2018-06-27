@@ -39,45 +39,41 @@ ChargerFenetreJeu()
 #Chambre = Mapping.Charger_Map("maps/ChambreTest.map")
 #Salon = Mapping.Charger_Map("maps/SalonTest.map")
 #---#
-AllPortails = {}
 
 AllPortailsFIXE = {
+    # NOUVEAU: On peut mettre un tuple (x,y,z...) dans les coordonnées d'origines, qui signifie soit l'un soit l'autre
                 #Chambre//Salon
-                'StairsChambreToSalon' : ('ChambreTest', 'SalonTest', [9, 6], [0, 3], None),
-                'StairsSalonToChambre' : ('SalonTest', 'ChambreTest', [8, 3], [0, 0], None),
+                'StairsChambreToSalon' : ['ChambreTest', 'SalonTest', [9, 6], [0, 3], None],
+                'StairsSalonToChambre' : ['SalonTest', 'ChambreTest', [8, 3], [0, 0], None],
                 #Salon//Ville de Depart
-                'SalonToDepart' : ('SalonTest', 'Foret13', [5, 12], [-16, -5], "Porte"),
-                'SalonToDepart2' : ('SalonTest', 'Foret13', [6, 12], [-16, -5], "Porte"),
-                'DepartToSalon' : ('Foret13', 'SalonTest', [21, 18], [0, 3], "Porte"),
-                'DepartToSalon2' : ('Foret13', 'SalonTest', [22, 18], [0, 3], "Porte"),
+                'SalonToDepart' : ['SalonTest', 'Foret13', [(5,6), 12], [-16, -5], "Porte"],
+                'DepartToSalon' : ['Foret13', 'SalonTest', [(21,22), 18], [0, 3], "Porte"],
                 #Labo//Ville de Depart
-                'DepartToLabo' : ('Foret13', 'Labo7', [38, 19], [15, 0], "Porte"),
-                'DepartToLabo2' : ('Foret13', 'Labo7', [39, 19], [15, 0], None),
-                'LaboToDepart' : ('Labo7', 'Foret13', [7, 16], [-16, -5], "Porte"),
-                'LaboToDepart2' : ('Labo7', 'Foret13', [8, 16], [-16, -5], None),
+                'DepartToLabo' : ['Foret13', 'Labo7', [(38,39), 19], [15, 0], "Porte"],
+                'LaboToDepart' : ['Labo7', 'Foret13', [(7,8), 16], [-16, -5], "Porte"],
                 #RandomHouse//Ville de Depart
-                'RandSalonToDepart' : ('randomsalon', 'Foret13', [5, 11], [-16, -5], "Porte"),
-                'RandSalonToDepart2' : ('randomsalon', 'Foret13', [6, 11], [-16, -5], "Porte"),
-                'DepartToRandSalon' : ('Foret13', 'randomsalon', [27, 24], [6, 10], "Porte"),
-                'DepartToRandSalon2' : ('Foret13', 'randomsalon', [28, 24], [6, 10], "Porte"),
+                'RandSalonToDepart' : ['randomsalon', 'Foret13', [(5,6), 11], [-16, -5], "Porte"],
+                'DepartToRandSalon' : ['Foret13', 'randomsalon', [(27,28), 24], [6, 10], "Porte"],
                 #DepartToEglise1#
-                'Eglise1ToDepart1' : ('Eglise1', 'Foret13', [15, 18], [-16, -4], "Porte"),
-                'Eglise1ToDepart2' : ('Eglise1', 'Foret13', [16, 18], [-16, -4], None),
-                'DepartToEglise1' : ('Foret13', 'Eglise1', [21, 33], [-10, 12], None),
-                'DepartToEglise2' : ('Foret13', 'Eglise1', [22, 33], [-10, 12], "Porte"),
+                'Eglise1ToDepart1' : ['Eglise1', 'Foret13', [(15,16), 18], [-16, -4], "Porte"],
+                'DepartToEglise1' : ['Foret13', 'Eglise1', [(21,22), 33], [-10, 12], "Porte"],
                 #Eglise2ToEglise1#
-                'Eglise1ToEglise21' : ('Eglise1', 'Eglise2', [20, 9], [-3, 12], None),
-                'Eglise1ToEglise22' : ('Eglise1', 'Eglise2', [21, 9], [-3, 12], None),
-                'Eglise2ToEglise11' : ('Eglise2', 'Eglise1', [10, 9], [-10, 12], None),
-                'Eglise2ToEglise22' : ('Eglise2', 'Eglise1', [11, 9], [-10, 12], None),
+                'Eglise1ToEglise21' : ['Eglise1', 'Eglise2', [(20,21), 9], [-3, 12], None],
+                'Eglise2ToEglise11' : ['Eglise2', 'Eglise1', [(10,11), 9], [-10, 12], None],
                 #VilleToEglise1#
-                'Eglise2ToVille1' : ('Eglise2', 'Ville5', [15, 18], [-16, -3], None),
-                'Eglise2ToVille2' : ('Eglise2', 'Ville5', [16, 18], [-16, -3], None),
-                'VilleToEglise21' : ('Ville5', 'Eglise2', [45, 38], [14, 18], None),
-                'VilleToEglise22' : ('Ville5', 'Eglise2', [46, 38], [14, 18], None),
+                'Eglise2ToVille1' : ['Eglise2', 'Ville5', [(15,16), 18], [-16, -3], None],
+                'VilleToEglise21' : ['Ville5', 'Eglise2', [(45,46), 38], [14, 18], None],
                    }
 
-AllPortails = AllPortailsFIXE
+AllPortails = {}
+for nom, data in AllPortailsFIXE.items():
+    # Ce truc compliqué transforme les coordonnées (x,y) ou x et y ne sont pas des tuple en tuple
+    # par exemple:
+    # (1, 2) ==> ((1,), (2,))
+    # ((1, 2), 3) ==> ((1, 2), (3,))
+    data[2] = (lambda x, y: ((x if isinstance(x, tuple) else (x,)), (y if isinstance(y, tuple) else (y,))))(*data[2])
+    AllPortails[nom] = data
+
 #---#
 
 #---PERSO---#
@@ -332,21 +328,21 @@ def play():
         LocPerso4 = [(round(Pos_Px)), math.floor(Pos_Py)-1]
 
         for nomPortail, Portail in AllPortails.items():
-            if LocPerso3 == Portail[2] and Maps.CurrentMapName == Portail[0]:
+            portail_origin, portail_dest, portail_coordonnes, portail_destination, portail_type = Portail
+            if (LocPerso3[0] in portail_coordonnes[0] and LocPerso3[1] in portail_coordonnes[1]) \
+                                                               and Maps.CurrentMapName == portail_origin:
                 if Portail[4] == "Porte":
                     # le portail est une porte
                     jouer_son(bruit_de_porte, 0.2)
                 print(nomPortail)
-                Maps.CurrentMapName = str(Portail[1])
-                #CurrentMap = Portail[1]
-                #print(Portail[1])
-                #print(str(Portail[1]))
-                #CurrentMap = Portail[1]
+                Maps.CurrentMapName = str(portail_dest)
+                #CurrentMap = portail_dest
+                #print(str(portail_dest))
                 Background.Obstacle = []
                 Mapping.ObstacleDecor = []
                 Background.ObstaclePNJ = []
                 Mapping.DecorListe = []
-                Modules.Diff = Portail[3]
+                Modules.Diff = portail_destination
                 #print(LocPerso3)
                 #print(Modules.Diff)
                 Modules.Axe_x = Modules.Axe_xINIT + Modules.Diff[0]*Background.TailleGrid

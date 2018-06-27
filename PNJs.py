@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pygame
+import random
 from pygame.locals import *
 from Classes import *
 from Textures import *
