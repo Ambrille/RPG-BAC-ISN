@@ -187,10 +187,10 @@ DMarie4  = [("Le patron ?", "Il est très occupé…"),("Bon je vais voir ce que
 
 Marie = PNJ(Nom = "Marie", Pos = (32*3, 32*12), Dialogue = Dialogue(Texte = DMarie1), Surface = "Hotel4", Direction = "Face0")
 #Joséphine#
-DJoséphine = [("Si vous saviez comment Marie danse bien...", "C'est elle qui m'a tout appris !"), ("Et regardez comment je danse bien aujourd'hui ~", "*Se concentre sur sa chorégraphie*")]
-DJoséphine2 = [("Ah mince ! j'ai encore oublié de donner", "mon cadeau pour Marie !...")]
+DJosephine = [("Si vous saviez comment Marie danse bien...", "C'est elle qui m'a tout appris !"), ("Et regardez comment je danse bien aujourd'hui ~", "*Se concentre sur sa chorégraphie*")]
+DJosephine2 = [("Ah mince ! j'ai encore oublié de donner", "mon cadeau pour Marie !...")]
 
-Joséphine = PNJ(Nom = "Joséphine", Pos = (32*21, 32*12), Dialogue = Dialogue(Texte = DJoséphine), Surface = "Hotel4", Direction = "Face0")
+Josephine = PNJ(Nom = "Joséphine", Pos = (32*21, 32*12), Dialogue = Dialogue(Texte = DJosephine), Surface = "Hotel4", Direction = "Face0")
 #Julie#
 DJulie1 = []
 DJulie2 = [("Que puis-je faire pour vous ?", "Un hamburger  peut être ?")]

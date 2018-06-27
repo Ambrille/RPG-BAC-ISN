@@ -62,13 +62,13 @@ class QuestClass(SDict):
         #Personnages#
         self.CharlesA = 0
         self.Ambre = 0
-        self.Timothée = 0
+        self.Timothee = 0
         self.Soana = 0
         self.Hippolyte = 0
         self.Jean = 0
         self.CharlesV = 0
         self.Sacha = 0
-        self.Joséphine = 0
+        self.Josephine = 0
         self.Arno = 0
         self.Paul = 0
         self.Amelie = 0
@@ -110,7 +110,9 @@ class MapClass(SDict):
 Fichier_sauvegarde = "Save/sauvegarde.json"
 try:
     Quest = QuestClass(charger_fichier(Fichier_sauvegarde))
-except (OSError, IOError):  # Pas de sauvegarde
+except (OSError, IOError) as e:  # Pas de sauvegarde
+    if isinstance(e, ValueError):
+        print("FICHIER sauvegarde.json CORROMPU")
     Quest = QuestClass()
     Quest.default()
 
@@ -118,13 +120,36 @@ except (OSError, IOError):  # Pas de sauvegarde
 Fichier_sauvegarde_module = "Save/sauvegarde_module.json"
 try:
     Modules = ModulesClass(charger_fichier(Fichier_sauvegarde_module))
-except (OSError, IOError):  # Pas de sauvegarde
+except (OSError, IOError) as e:  # Pas de sauvegarde
+    if isinstance(e, ValueError):
+        print("FICHIER sauvegarde_module.json CORROMPU")
     Modules = ModulesClass()
     Modules.default()
+
 #---MAP---#
 Fichier_sauvegarde_Map = "Save/sauvegarde_map.json"
 try:
     Maps = MapClass(charger_fichier(Fichier_sauvegarde_Map))
-except (OSError, IOError):
+except (OSError, IOError) as e:
+    if isinstance(e, ValueError):
+        print("FICHIER sauvegarde_map.json CORROMPU")
     Maps = MapClass()
     Maps.default()
+
+def supprimer_tout():
+    try:
+        os.remove("sauvegarde.json")
+    except:
+        pass
+    try:
+        os.remove("sauvegarde_module.json")
+    except:
+        pass
+    try:
+        os.remove("sauvegarde_map.json")
+    except:
+        pass
+    Quest = QuestClass()
+    Quest.default()
+    Modules = ModulesClass()
+    Modules.default()
