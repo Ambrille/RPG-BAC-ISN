@@ -61,8 +61,8 @@ AllPortailsFIXE = {
     'Eglise1ToEglise21' : ['Eglise1', 'Eglise2', [(20,21), 9], [-3, 12], "Echelle"],
     'Eglise2ToEglise11' : ['Eglise2', 'Eglise1', [(10,11), 9], [-10, 12], "Echelle"],
     #VilleToEglise1#
-    'Eglise2ToVille1' : ['Eglise2', 'Ville', [(15,16), 18], [-16, -3], None],
-    'VilleToEglise21' : ['Ville', 'Eglise2', [(45,46), 38], [14, 18], None],
+    'Eglise2ToVille1' : ['Eglise2', 'Ville', [(15,16), 18], [-16, -3], "Porte"],
+    'VilleToEglise21' : ['Ville', 'Eglise2', [(45,46), 38], [14, 18], "Porte"],
 }
 
 AllPortails = {}
@@ -483,9 +483,10 @@ def play():
             for t in Mapping.ObstacleDecor:
                 pygame.draw.rect(Fenetre_Jeu, (0,0,150), (t[0]*Background.TailleGrid + Modules.Axe_x, t[1]*Background.TailleGrid + Modules.Axe_y, Background.TailleGrid, Background.TailleGrid), 3)
             for t in AllPortails.values():
-                POS = t[2]
-                #print(POS)
-                pygame.draw.rect(Fenetre_Jeu, (150,0,150), (POS[0]*Background.TailleGrid + Modules.Axe_x, POS[1]*Background.TailleGrid + Modules.Axe_y, Background.TailleGrid, Background.TailleGrid), 4)
+                PACKED_POS = t[2]
+                UNPACKED_POS = [(x,y) for x in PACKED_POS[0] for y in PACKED_POS[1]]
+                for POS in UNPACKED_POS:
+                    pygame.draw.rect(Fenetre_Jeu, (150,0,150), (POS[0]*Background.TailleGrid + Modules.Axe_x, POS[1]*Background.TailleGrid + Modules.Axe_y, Background.TailleGrid, Background.TailleGrid), 4)
             for t in Background.Obstacle:
                 pygame.draw.rect(Fenetre_Jeu, (150,0,0), (t[0]*Background.TailleGrid + Modules.Axe_x, t[1]*Background.TailleGrid + Modules.Axe_y, Background.TailleGrid, Background.TailleGrid), 5)
             for t in Background.ObstaclePNJ:
