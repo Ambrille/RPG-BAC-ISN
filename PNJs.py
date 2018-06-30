@@ -359,6 +359,7 @@ Julien = PNJ(Nom = "Julien", Pos = (32*37, 32*5), Dialogue = Dialogue(Texte = DJ
 DFabien1 = [("Oh, Bonjour Jacques !", "Tu es venu ici pour choisir ton Premier Pokem..."), ("Ah mince, c'est le mauvais script...","Du coup ! Oui, je voulais te voir."), ("Tu te rappelles du moment où ton frère est parti ...", "il y a déjà 3 ans ?") ,("Eh bien, il n’est pas  parti sans rien", "laisser derrière  lui"),
                       ("Il a laissé un journal que j’ai soigneusement récupéré", "... j’attendais le bon moment pour te le donner."),("Il y mentionne notamment une grotte,", "Je pense que tu devrais commencer tes recherches par là.")]
 DFabien2 = [("Alors Jacques… Cette Grotte ?", "")]
+DFabien3 = [("Alors Jacques… Cette Grotte ?", ""),("Incroyable!", "Mais qu'est il passé par la tete de ron frère?")]
 
 Fabien = PNJ(Nom = "Fabien", Pos = (32*5, 32*8), Dialogue = Dialogue(Texte = DFabien1), Surface = "Labo", Direction = "Dos0")
 #Martin#
