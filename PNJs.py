@@ -223,6 +223,7 @@ Ryan = PNJ(Nom = "Ryan", Pos = (32*1, 32*1), Dialogue = Dialogue(Texte = DRyan1)
 #Hyppolite#
 DHippolyte1 = [("La description correspond", "C'est forcément  lui")]
 DHippolyte2 = [("Ecoute le  chef", "Veux-tu ?")]
+DHippolyte3 = [("Bartouille était un grand homme!", "")]
 
 Hippolyte = PNJ(Nom = "Hippolyte", Pos = (32*1, 32*1), Dialogue = Dialogue(Texte = DHippolyte1), Surface = "Mine", Direction = "Face0")
 #Arno#
@@ -235,6 +236,7 @@ DArno5 = [("Arno : Nous sommes justement là pour parler de responsabilités.", 
 DArno6 = [("Arno : Comment êtes-vous impliqués avec la Team Chaussecourte ?","")]
 DArno7 = [("Arno : Rien de plus ?"," Et T.V alors ?"),  ("Jacques à découvert des immenses transactions entre la Team Chaussecourte et T.V.",  "Qui est T.V ?!")]
 DArno8 = [("Où sont-ils ?","VITE !")]
+DArno9 = [("Nous regrettons tous pour Bartouille!","Mais nous devons continuer sa quête!")]
 
 Arno = PNJ(Nom = "Arno", Pos = (32*10, 32*4), Dialogue = Dialogue(Texte = DArno3), Surface = "GrottePetite5", Direction = "Face0")
 #Barthelemy#
@@ -259,6 +261,7 @@ DEmma1 = [("MMMmmmmh…Cette salade", "Un vraie délice")]
 Emma = PNJ(Nom = "Emma", Pos = (32*29+20, 32*17+16), Dialogue = Dialogue(Texte = DEmma1), Surface = "Hotel4", Direction = "Droite0")
 #Thomas#
 DThomas1 = [("Allez les  filles !", "C’est ma tournée !")]
+DThomas2 = [("Oups!", "j'ai plus d'argent !")]
 
 Thomas = PNJ(Nom = "Thomas", Pos = (32*35+20, 32*13-16), Dialogue = Dialogue(Texte = DThomas1), Surface = "Hotel4", Direction = "Droite0")
 #Marie#
