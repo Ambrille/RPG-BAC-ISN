@@ -332,7 +332,8 @@ DVictorD1 = [("Promis juré craché sur la terre bénie,", "lavé puis ravalé e
 
 VictorD = PNJ(Nom = "VictorD", Pos = (32*12, 32*11), Dialogue = Dialogue(Texte = DVictorD1), Surface = "Eglise1", Direction = "Dos0")
 #Ewan#
-DEwan1 = [("Mais c'est quoi cette histoire?", "Allez je retoourne dans ma  cité!"), ("Got them", "Po-Po stressing!")]
+DEwan1 = [("Il est écrit..", "Karmaboy...Légende passée")]
+DEwan2 = [("Mais c'est quoi cette histoire?", "Allez je retoourne dans ma  cité!"), ("Got them", "Po-Po stressing!")]
 
 #LeoG#
 DLeoG1 = [("Empêchez les de passer !", "L’artefact passe avant tout !")]
@@ -376,3 +377,8 @@ Fabien = PNJ(Nom = "Fabien", Pos = (32*5, 32*8), Dialogue = Dialogue(Texte = DFa
 DMartin1 = [("Je retrouve pas ma PS4 !...", "Je suis sûr que c'est encore Pr. Richard..."), ("il deteste me voir jouer...", "")]
 DMartin2 = [("Bouh", "")]
 Martin = PNJ(Nom = "Martin", Pos = (32*8, 32*2), Dialogue = Dialogue(Texte = DMartin1), Surface = "Labo", Direction = "Dos0")
+#LeoF#
+DLeoF1 = [("Ah dur vie  d'etre soldat", "haha!")]
+DLeoF2 = [("Mouhahahaha", "J'étais le chef depuis le   début!"), ("Tu pensais nous avoir vaicu  n'est ce pas!", "Jamais tu ne t'en sortiras!"), ("J'en fait appel  au héros de l'ancien temps!", "Soie le bras armée de ma  colère"),
+         ("Karmaboyyyy", "EN SCENE!!")]
+DLeoF3 = [("Mais non c'est un terrible malentendue", "Charles était le vraie chef"), ("Ne me faite pas  de mal", "J'ai de   l'argent vous  savez!!!")]
