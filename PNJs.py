@@ -250,6 +250,7 @@ DPaul2 = [("Ecoute le  chef", "Veux-tu ?")]
 Paul = PNJ(Nom = "Paul", Pos = (32*12, 32*15), Dialogue = Dialogue(Texte = DPaul1), Surface = "Guilde", Direction = "Gauche0")
 #Sacha#
 DSacha1 = [("Cette homme avec une cape", "Tu ne le trouves pas trop bizarre ?")]
+DSacha2 = [("Pourquoi il me fixe comme ca?", "")]
 
 Emma = PNJ(Nom = "Sacha", Pos = (32*32+20, 32*17+16), Dialogue = Dialogue(Texte = DSacha1), Surface = "Hotel4", Direction = "Gauche0")
 #Emma#
@@ -265,6 +266,7 @@ DMarie1 = [("Je me  demande...", "Tu fais attention à la couleur de tes chausse
 DMarie2  = [("Tiens !", "Autobus !")]
 DMarie3  = [("j’ai reçu un porte banane pour mon anniv", "C’est génial !")]
 DMarie4  = [("Le patron ?", "Il est très occupé…"),("Bon je vais voir ce que  je peux  faire", "…Le voilà qui arrive !")]
+DMarie5  = [("tout s'est bien  passé avec  le patron?","Tu veux un bisous  magique?"), ("eh ben non","mais si tu veux je t'offres des chaussettes")]
 
 Marie = PNJ(Nom = "Marie", Pos = (32*3, 32*12), Dialogue = Dialogue(Texte = DMarie1), Surface = "Hotel4", Direction = "Face0")
 #Joséphine#
@@ -290,10 +292,12 @@ DNicolas1 = [("Bienvenue dans notre humble établissement", "Que puis-je faire p
 Nicolas = PNJ(Nom = "Nicolas", Pos = (32*19, 32*19), Dialogue = Dialogue(Texte = DNicolas1), Surface = "Hotel4", Direction = "Droite0")
 #Victoria#
 DVictoria1 = [("Ne nous sous-estimez pas !  ","Nous sommes des femmes fortes et dignes !")]
+DVictoria1 = [("Non Charles!","Pourquoi  tant de   haine?")]
 
 Victoria = PNJ(Nom = "Victoria", Pos = (3222.5, 327), Dialogue = Dialogue(Texte = DVictoria1), Surface = "QG", Direction = "Gauche0")
 #Clara#
 DClara1 = [("Vous commencez a troublé nos activités…", "Si j’ai un conseil pour toi, c’est de te calmer !")]
+DClara2 = [("Peut etre que  je  pourrai remplacer le boss", "oups qu'est ce que tu as à m'écouter")]
 
 Clara = PNJ(Nom = "Clara", Pos = (32*24, 32*7), Dialogue = Dialogue(Texte = DClara1), Surface = "Mine", Direction = "Droite0")
 #Alexis#
@@ -325,11 +329,12 @@ DVictorD1 = [("Promis juré craché sur la terre bénie,", "lavé puis ravalé e
 
 VictorD = PNJ(Nom = "VictorD", Pos = (32*12, 32*11), Dialogue = Dialogue(Texte = DVictorD1), Surface = "Eglise1", Direction = "Dos0")
 #Ewan#
-
+DEwan1 = [("Mais c'est quoi cette histoire?", "Allez je retoourne dans ma  cité!"), ("Got them", "Po-Po stressing!")]
 
 #LeoG#
 DLeoG1 = [("Empêchez les de passer !", "L’artefact passe avant tout !")]
 DLeoG2 = [("Halte la !","Rendez-vous ou mourrez !")]
+DLeoG3 = [("Hum...","")]
 
 
 #CharlesA#
@@ -339,6 +344,7 @@ DCharlesA1 = [("l'Aube et le crépuscule...","n'oublie pas..."), ("la vie est te
 #Ines#
 DInes1 = [("Bonjour Mon Chaton, bien dormi ?", "Le professeur Richard voulait te voir !"), ("Pourrais-tu le rejoindre dans son Labo ?", "C'est juste à côté, et je crois qu'il voulait te montrer des choses ~")]
 DInes2 = [("Salut Mon Amour ~", "As-tu  vu le professeur ?"),  ("*Votre mère retourne dans ses pensées*", "")]
+DInes3 = [("Salut Mon Amour ~", "il y a des cookies dans le four si tu veux"),  ("*Votre mère retourne dans ses pensées*", "")]
 
 Ines = PNJ(Nom = "Ines", Pos = (32*7, 32*9), Dialogue = Dialogue(Texte = DInes1), Surface = "Salon", Direction = "Face0")
 #Ambre#
