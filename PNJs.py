@@ -332,6 +332,7 @@ DLeoG2 = [("Halte la !","Rendez-vous ou mourrez !")]
 
 
 #CharlesA#
+DCharlesA1 = [("l'Aube et le crépuscule...","n'oublie pas..."), ("la vie est tel un kinder...","pleine de surprise")]
 
 
 #Ines#
