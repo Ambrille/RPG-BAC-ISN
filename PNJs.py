@@ -275,7 +275,7 @@ DJosephine2 = [("Ah mince ! j'ai encore oublié de donner", "mon cadeau pour Mar
 
 Josephine = PNJ(Nom = "Joséphine", Pos = (32*21, 32*12), Dialogue = Dialogue(Texte = DJosephine), Surface = "Hotel4", Direction = "Face0")
 #Julie#
-DJulie1 = []
+DJulie1 = [("Notre maire est un homme splendide", "tu ne trouves pas?")]
 DJulie2 = [("Que puis-je faire pour vous ?", "Un hamburger  peut être ?")]
 
 Julie = PNJ(Nom = "Julie", Pos = (32*28, 32*11), Dialogue = Dialogue(Texte = DJulie2), Surface = "Hotel4", Direction = "Face0")
