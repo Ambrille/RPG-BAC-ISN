@@ -209,6 +209,7 @@ DCharlesV1 = [("Je sais pourquoi tu es venu.","C'est dommage pour ton frère, vr
               ("...",""),("J'y pense, mais tu ne connais le Yostex que de nom...",""),("C'est une fiole, rien d'autre...","Ah, ça ne paraît pas hein ?"),("Ton frère est mort ..."," .pour un ustensile de cuisine."),
               ("Moi qui croyais que la mort n'a","pas le sens de l'humour."),("Bon, une fiole qui exauce tous les souhaits.","Je te l'accorde"),("Peu importe, ton frère a interféré.","Donc, il est mort."),
               ("Tu imagines bien que l'accès au Yostex est ...","Disons, difficile."),("Une carte et une clé, mais que j'ai faillis","perde à cause de deux bambins."),("Comment ça, tu les veux ?","Viens les chercher alors, j'attends ...")]
+DCharlesV2 = [("Non  pitiez!", "Arêtez de me taper"), ("Je vous promet de plus etre une grosse guez", "")]
 CharlesV = PNJ(Nom = "CharlesV", Pos = (32*14, 32*4), Dialogue = Dialogue(Texte = DCharlesV1), Surface = "QG", Direction = "Dos0")
 #Jean#
 DJean1 = [("Le secret ?", "Je l’ai oublié…")]
