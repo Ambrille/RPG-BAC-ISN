@@ -18,7 +18,7 @@ class GestuelClass(object):
                    "Ambre", "Amelie", "Marie", "Ewan", "Julie", "Alexis", "Adrien",
                    "Arno", "Barthelemy", "Emma", "Ewan", "Hippolyte", "Jean",
                    "Julien", "Martin", "Paul", "Sacha", "Soana", "Tanguy", "Thomas",
-                   "Timothée", "VictorD", "Victoria"
+                   "Timothée", "VictorD", "Victoria", "Josephine", "LeoF", "VictorA", "Clara"
                   ]
                   
     def ChargerGesture(self, Nom):
